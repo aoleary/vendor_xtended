@@ -32,6 +32,7 @@ SOONG_CONFIG_xtendedGlobalVars += \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
     bootloader_message_offset \
+    disable_postrender_cleanup \
     gralloc_handle_has_reserved_size \
     target_init_vendor_lib \
     target_ld_shim_libs \
@@ -60,6 +61,7 @@ SOONG_CONFIG_xtendedGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPL
 SOONG_CONFIG_xtendedNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
 SOONG_CONFIG_xtendedQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_xtendedQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
+SOONG_CONFIG_lineageGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
