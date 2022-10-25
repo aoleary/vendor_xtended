@@ -35,6 +35,7 @@ SOONG_CONFIG_xtendedGlobalVars += \
     gralloc_handle_has_reserved_size \
     target_init_vendor_lib \
     target_ld_shim_libs \
+    target_process_sdk_version_override \
     target_surfaceflinger_udfps_lib \
     uses_egl_display_array
 
@@ -78,6 +79,7 @@ SOONG_CONFIG_xtendedGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_U
 SOONG_CONFIG_xtendedGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
 SOONG_CONFIG_xtendedGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
 SOONG_CONFIG_lineageGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
+SOONG_CONFIG_lineageGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_xtendedQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
