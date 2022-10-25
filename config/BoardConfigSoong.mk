@@ -51,8 +51,9 @@ SOONG_CONFIG_xtendedNvidiaVars += \
 SOONG_CONFIG_NAMESPACES += xtendedQcomVars
 SOONG_CONFIG_xtendedQcomVars += \
     supports_extended_compress_format \
-    uses_pre_uplink_features_netmgrd
-    
+    uses_pre_uplink_features_netmgrd \
+    uses_qcom_bsp_legacy
+
 # Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
 ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_xtendedQcomVars += \
@@ -69,6 +70,7 @@ SOONG_CONFIG_lineageGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_PO
 SOONG_CONFIG_lineageGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_lineageGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
 SOONG_CONFIG_lineageGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
+SOONG_CONFIG_lineageQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGACY)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
