@@ -40,6 +40,7 @@ SOONG_CONFIG_xtendedGlobalVars += \
     target_ld_shim_libs \
     target_process_sdk_version_override \
     target_surfaceflinger_udfps_lib \
+    uses_camera_parameter_lib \
     uses_egl_display_array
 
 SOONG_CONFIG_NAMESPACES += xtendedNvidiaVars
@@ -72,6 +73,7 @@ BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
+TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY ?= libcamera_parameters
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
 # Soong value variables
@@ -86,6 +88,7 @@ SOONG_CONFIG_xtendedGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST
 SOONG_CONFIG_xtendedGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
 SOONG_CONFIG_lineageGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
 SOONG_CONFIG_lineageGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
+SOONG_CONFIG_lineageGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
 SOONG_CONFIG_xtendedQcomVars_qcom_display_headers_namespace := vendor/qcom/opensource/commonsys-intf/display
 else
