@@ -126,6 +126,15 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     RepainterServicePriv
 
+# Smartspace
+PRODUCT_PACKAGES += \
+    DeviceIntelligenceNetworkPrebuilt \
+    DevicePersonalizationPrebuiltPixel2021 \
+    PixelConfigOverlayCommon
+
+PRODUCT_COPY_FILES += \
+    vendor/xtended/prebuilt/common/etc/permissions/privapp-permissions-google-as.xml:product/etc/permissions/privapp-permissions-google-as.xml
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
