@@ -55,7 +55,7 @@ cc_library_headers {
 soong_config_module_type {
     name: "disable_postrender_cleanup",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     bool_variables: ["disable_postrender_cleanup"],
     properties: ["cppflags"],
 }
@@ -106,7 +106,7 @@ gralloc_handle_reserved_size {
 soong_config_module_type {
     name: "target_process_sdk_version_overrides",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     value_variables: ["target_process_sdk_version_override"],
     properties: ["cppflags"],
 }
@@ -178,7 +178,7 @@ surfaceflinger_udfps_lib {
 soong_config_module_type {
     name: "needs_camera_boottime",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     bool_variables: ["needs_camera_boottime"],
     properties: ["cppflags"],
 }
@@ -195,7 +195,7 @@ needs_camera_boottime {
 soong_config_module_type {
     name: "needs_netd_direct_connect_rule",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     bool_variables: ["needs_netd_direct_connect_rule"],
     properties: ["cppflags"],
 }
@@ -212,7 +212,7 @@ needs_netd_direct_connect_rule {
 soong_config_module_type {
     name: "no_cameraserver",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     bool_variables: ["has_legacy_camera_hal1"],
     properties: [
         "cppflags",
@@ -234,7 +234,7 @@ no_cameraserver {
 soong_config_module_type {
     name: "camera_in_mediaserver",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     bool_variables: ["has_legacy_camera_hal1"],
     properties: [
         "overrides",
@@ -263,7 +263,7 @@ camera_in_mediaserver {
 soong_config_module_type {
     name: "has_memfd_backport",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     bool_variables: ["has_memfd_backport"],
     properties: ["cppflags"],
 }
@@ -280,7 +280,7 @@ has_memfd_backport {
 soong_config_module_type {
     name: "bootloader_message_offset",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     value_variables: ["bootloader_message_offset"],
     properties: ["cflags"],
 }
@@ -297,7 +297,7 @@ bootloader_message_offset {
 soong_config_module_type {
     name: "camera_parameter_library",
     module_type: "cc_defaults",
-    config_namespace: "lineageGlobalVars",
+    config_namespace: "xtendedGlobalVars",
     value_variables: ["uses_camera_parameter_lib"],
     properties: ["whole_static_libs"],
 }
